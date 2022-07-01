@@ -1,0 +1,8 @@
+.fondo{
+    background: rgb(255,248,0);
+    background: linear-gradient(114deg, rgba(255,248,0,1) 17%, rgba(230,12,12,1) 63%);
+}
+.fuente{
+    font-family: 'Berkshire Swash', cursive;
+
+}
