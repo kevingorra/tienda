@@ -1,4 +1,5 @@
-let plato1 ={
+
+    let plato1 ={
         Nombre: "Bandeja Paisa",
         Precio:25000,
         Descripcion:"Porcion de arroz, Frijoles, Ensalada, Aguacate, carne de Rex o Cerdo ,Tajada de maduro,",
@@ -31,60 +32,7 @@ let plato1 ={
         Precio:35000,
         Descripcion:"Caldo de pollo con papas pollo carne platano yuca arroz y ensalada",
         Categoria:1,
-        Foto:"../src/../assets/img/sancocho.jpg"
+        Foto:""
     }
-    
+
     let platos=Array(plato1,plato2,plato3,plato4,plato5)
-
-
-    //1. Metodo  forEach
-    platos.forEach(function(plato){
-        console.log(plato.Nombre)
-    })
-    //2. Metodo Filter
-    let resultado = platos.filter(function(plato){
-        return(plato.Categoria==2)
-    })
-
-    console.log(resultado)
-
-    resultado=platos.filter(function(plato){
-        return(plato.Precio >20000 )
-    })
-
-    console.log(resultado)
-
-    resultado=platos.filter(function(plato){
-        return(plato.Categoria==1 || plato.Categoria ==3)
-    })
-
-    console.log(resultado)
-
-    //3. Metodo Find
-
-    let busqueda =platos.find(function(plato){
-        return(plato.Precio==35000)
-    })
-
-    console.log(busqueda)
-
-    //4. metodo map
-
-    let mapa =platos.map(function(plato){
-        return(plato.Categoria=100)
-
-    })
-    console.log(mapa)
-
-    //5. Metodo push
-
-
-    let plato6 ={
-        Nombre: "sopa de patacones",
-        Precio:35000,
-        Descripcion:"Caldo de pollo con papas pollo carne platano yuca arroz y ensalada",
-        Categoria:1,
-        Foto:"../src/../assets/img/sancocho.jpg"
-    }
-    platos.push(plato6)
-    console.log(platos)
