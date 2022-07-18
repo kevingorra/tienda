@@ -22,7 +22,7 @@
     <header class="animate__animated animate__flash">
         <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#">Navbar</a>
+              <a class="navbar-brand" href="../../index.html">Navbar</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -61,10 +61,33 @@
                         <i class="bi bi-star-fill"></i>
                         <i class="bi bi-star-fill"></i>
                         <i class="bi bi-star-fill"></i>
+                        <br><br>
+                       
+                        <div class="row">
+                          <div class="col-6">
+                            <h4>Formas de Pago</h4>
+                            <img src="../../assets/img/american-express.png" alt="">
+                            <img src="../../assets/img/maestro.png" alt="">
+                            <img src="../../assets/img/visa.png" alt="">
+                          </div>
+                          <div class="col-6">
+                            <h4><i class="bi bi-truck"> Envio Nacional</i></h4>
+                            <p>Conoce los tiempos y las formas de Envio</p>
+                          </div>
+                      </div>
+                      <br>
+
+                      <h4><i class="bi bi-arrow-repeat"></i> Devolucion Grtatis</h4>
+                      <p>Tienesa 30 dias desde que lo recibes</p>
+
+                      <br>
+                        <label class="form-label">Cantidad :</label>
+                        <input type="number" placeholder="1" id="cantidad" min="0" onkeydown="return false" >
                         <br>
-                    <img src="../../assets/img/american-express.png" alt="">
-                    <img src="../../assets/img/maestro.png" alt="">
-                    <img src="../../assets/img/visa.png" alt="">
+
+                        <button type="submit" class="btn btn-primary ">Añadir al Carrito</button>
+
+                      </div>
                     </div>
                 </div>
             </div>
@@ -75,8 +98,8 @@
     <footer>
 
     </footer>
-
-    <script src="/src/controllers/controladortienda.js" type="module"></script>
+    <script src="/src/controllers/controladorCompra.js"></script>
+  
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 </html>

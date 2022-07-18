@@ -5,7 +5,7 @@ export function pintarProductos(productos){
 
     productos.forEach(function(producto){
         let columna=document.createElement('div')
-        columna.classList.add('col')
+        columna.classList.add('col','my-2')
         let tarjeta=document.createElement('div')
         tarjeta.classList.add('card','h-100','shadow','text-center')
         let foto=document.createElement('img')
@@ -23,10 +23,14 @@ export function pintarProductos(productos){
         columna.addEventListener('mouseleave',function(evento){
             foto.src=producto.fotos[0]
         })
+        let descripcion=document.createElement('p')
+        descripcion.classList.add('d-none')
+        descripcion.textContent=producto.descripcion
         
         tarjeta.appendChild(foto)
         tarjeta.appendChild(nombre)
         tarjeta.appendChild(precio)
+        tarjeta.appendChild(descripcion)
         columna.appendChild(tarjeta)
         fila.appendChild(columna)
 
