@@ -30,8 +30,14 @@ if (JSON.parse(localStorage.getItem ('carrito'))==null){
 }
 cantCarrito.textContent = carrito.length
 agregar.addEventListener('click',function(){
+    let alerta =document.getElementById('alerta')
+    alerta.classList.remove('invisible')
+
+    setTimeout(function(){
+            alerta.classList.add('invisible')
+    },3000)
     let cantidad =document.getElementById('cantidad').value
-    
+    producto.cantidad=cantidad
     carrito.push(producto)
     console.log(carrito)
     localStorage.setItem('carrito',JSON.stringify(carrito))
