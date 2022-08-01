@@ -34,8 +34,14 @@ export function pintarResumenCompra(fotourl,nombreMensaje,banderaBoton,banderaPr
     let cantidad=document.createElement('h5')
     cantidad.textContent=cantidadProducto
 
+    let subtotal=document.createElement('h5')
+    subtotal.textContent=precioProducto*cantidadProducto
+
+    
+
     columna1.appendChild(foto)
     columna2.appendChild(nombre)
+    
     if(banderaBoton){
         columna2.appendChild(boton)
     }
@@ -45,6 +51,8 @@ export function pintarResumenCompra(fotourl,nombreMensaje,banderaBoton,banderaPr
     if(banderaCantidad){
         columna2.appendChild(cantidad)
     }
+    columna2.appendChild(subtotal)
+    
     fila.appendChild(columna1)
     fila.appendChild(columna2)
     contenedor.appendChild(fila)

@@ -16,7 +16,7 @@ export function pintarProductos(productos){
         nombre.textContent=producto.nombre
         let precio=document.createElement('h4')
         precio.classList.add('fw-bold')
-        precio.textContent='$ '+producto.precio+ ' COP'
+        precio.textContent=producto.precio
         columna.addEventListener('mouseover',function(evento){
             foto.src=producto.fotos[1]
         })

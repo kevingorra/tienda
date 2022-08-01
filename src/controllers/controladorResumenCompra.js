@@ -1,10 +1,10 @@
 import {pintarResumenCompra}from './controladorPintarResumen.js'
 let carrito =JSON.parse(localStorage.getItem('carrito'))
 if (carrito==null){
-    pintarResumenCompra('../../assets/img/carritovacio.jpg','carrito vacio',true,false,null,false,null)
+    pintarResumenCompra('../../assets/img/carritovacio.jpg','carrito vacio',true,false,null,false,null,)
 }else{
     carrito.forEach(function(producto){
-        pintarResumenCompra(producto.foto,producto.nombre,false,true,producto.precio,true,producto.cantidad) 
+        pintarResumenCompra(producto.foto,producto.nombre,false,true,producto.precio,true,producto.cantidad,true) 
 })}
 
 

@@ -44,6 +44,12 @@ agregar.addEventListener('click',function(){
     cantCarrito.textContent = carrito.length
     producto.cantidad=cantidad
 
+    //rrecorriendo un arreglo
+    carrito.forEach(function(producto){
+        console.log(producto.cantidad)
+        
+    });
+
 })
 
 
