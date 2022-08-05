@@ -1,4 +1,4 @@
-export function pintarResumenCompra(fotourl,nombreMensaje,banderaBoton,banderaPrecio,precioProducto,banderaCantidad,cantidadProducto){
+export function pintarResumenCompra(fotourl,nombreMensaje,banderaBoton,banderaPrecio,precioProducto,banderaCantidad,cantidadProducto,banderaSubtotal){
 
     let contenedor=document.getElementById('contenedor')
 
@@ -29,13 +29,16 @@ export function pintarResumenCompra(fotourl,nombreMensaje,banderaBoton,banderaPr
 
 
     let precio=document.createElement('h4')
-    precio.textContent=precioProducto
+    precio.textContent='Precio : '+precioProducto
 
     let cantidad=document.createElement('h5')
-    cantidad.textContent=cantidadProducto
+    cantidad.textContent='Cantidad : '+cantidadProducto+' Und'
 
-    let subtotal=document.createElement('h5')
-    subtotal.textContent=precioProducto*cantidadProducto
+    let subtotal=document.createElement('h6')
+    if(precioProducto!=null){
+        subtotal.textContent= "Subtotal $ "+ cantidadProducto*Number(precioProducto.replace("$ ",""))
+    }
+    
 
     
 
@@ -51,7 +54,10 @@ export function pintarResumenCompra(fotourl,nombreMensaje,banderaBoton,banderaPr
     if(banderaCantidad){
         columna2.appendChild(cantidad)
     }
-    columna2.appendChild(subtotal)
+    if(banderaSubtotal){
+        columna2.appendChild(subtotal)
+    }
+   
     
     fila.appendChild(columna1)
     fila.appendChild(columna2)

@@ -1,5 +1,3 @@
-
-
 import {productosBD} from "../helpers/baseDatos.js";
 
 
@@ -10,6 +8,7 @@ import { buscarProductos } from "./controladorBuscar.js";
 import { crearProducto } from "./crearProducto.js";
 buscarProductos()
 
+document.getElementById('carrito1').innerHTML=localStorage.getItem('cantCarrito')
 
 let contenedor=document.getElementById('fila')
 contenedor.addEventListener('click',function(evento){
